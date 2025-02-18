@@ -27,12 +27,19 @@ function add_task_to_file(task_id, { task_description, task_status, date_of_crea
 
 function update_task_at_file(task_id, task_data) {
     const file_content = load_tasks_from_file();
-    Object.assign(file_content[task_id], task_data);
+    try {
+        Object.assign(file_content[task_id], task_data);
+    } catch (_error) {
+        throw new Error(`Invalid id: there is not any task with an id of ${task_id}`);
+    }
     save_tasks_to_file(file_content);
 };
 
 function delete_task_from_file(task_id) {
     const file_content = load_tasks_from_file();
+    if (!file_content.hasOwnProperty(task_id)) {
+        throw new Error(`Invalid id: there is not any task with an id of ${task_id}`);
+    }
     delete file_content[task_id];
     save_tasks_to_file(file_content);
 };
