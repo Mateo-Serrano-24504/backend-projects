@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "src/task-tracker.js",
   "scripts": {
-    "start": "npm src/task-tracker.js"
+    "start": "node src/task-tracker.js"
   },
   "keywords": [],
   "author": "Mateo-Serrano-24504",
