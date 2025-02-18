@@ -1,6 +1,6 @@
 {
   "name": "task-tracker-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/task-tracker.js",
   "scripts": {
     "start": "node src/task-tracker.js"
