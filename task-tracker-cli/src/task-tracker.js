@@ -6,7 +6,7 @@ const readline_module = require("node:readline");
 const readline = readline_module.createInterface({
     input: process.stdin,
     output: process.stdout,
-    prompt: "task-tracker ",
+    prompt: "> task-tracker ",
 });
 
 readline.prompt();

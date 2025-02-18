@@ -103,20 +103,26 @@ function list_tasks({ task_id, task_string: status }) {
         tasks = filter_object_by_values(tasks, task => task.status === status);
     }
 
-    console.log("\n");
-    console.log("".padEnd(40, "-"), "\n");
+    if (!Object.entries(tasks).length) {
+        console.log("\n");
+        console.log("\t--- No tasks ---");
+        console.log("\n");
+    } else {
+        console.log("\n");
+        console.log("".padEnd(40, "-"), "\n");
 
-    for (const task_id in tasks) {
-        console.log(
-            `Task id: ${task_id}\n`,
-            `Task description: ${tasks[task_id].description}\n`,
-            `Task status: ${tasks[task_id].status}\n`,
-            `Task creation date: ${tasks[task_id].date_of_creation}\n`,
-            `Task last updating date: ${tasks[task_id].date_of_updating}\n`,
-        )
+        for (const task_id in tasks) {
+            console.log(`${tasks[task_id].description}:`)
+            console.log(
+                `\t- Id: ${task_id}\n` +
+                `\t- Status: ${tasks[task_id].status}\n` +
+                `\t- Creation date: ${tasks[task_id].date_of_creation}\n` +
+                `\t- Last updating date: ${tasks[task_id].date_of_updating}\n`
+            )
+        }
+
+        console.log("".padEnd(40, "-"), "\n");
     }
-
-    console.log("".padEnd(40, "-"), "\n");
 };
 
 const FUNCTIONS = {
