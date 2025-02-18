@@ -30,7 +30,7 @@ task-cli help
 
 Every task is given a random and unique ID when added to the tracker, and its status is set to 'todo' by default.
 
-The following is an example provided at [roadmap.sh](https://roadmap.sh/backend/projects):
+The following is an example provided at [roadmap.sh](https://roadmap.sh/projects/task-tracker):
 
 ```
 # Adding a new task
