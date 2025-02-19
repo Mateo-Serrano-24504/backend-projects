@@ -1,0 +1,14 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "Expense tracker CLI project with Node.JS",
+  "main": "src/expense-tracker.js",
+  "scripts": {
+    "start": "node src/expense-tracker.js"
+  },
+  "author": "Mateo-Serrano-24504",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^13.1.0"
+  }
+}
