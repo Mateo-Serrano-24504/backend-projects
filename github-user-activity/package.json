@@ -1,0 +1,12 @@
+{
+  "name": "github-user-activity",
+  "version": "1.0.0",
+  "main": "src/github-user-activity.js",
+  "scripts": {
+    "start": "node src/github-user-activity.js"
+  },
+  "keywords": [],
+  "author": "Mateo-Serrano-24504",
+  "license": "ISC",
+  "description": "Github User Activity CLI with Node.JS"
+}
