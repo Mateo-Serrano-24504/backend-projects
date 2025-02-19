@@ -7,7 +7,7 @@
 
 ### How to run
 
-Once you have cloned the repository, as indicated in [the main README file](../README.md), execute the following commands to start the execution of the Task Tracker CLI:
+Once you have cloned the repository, as indicated in [the main README file](../README.md), execute the following:
 
 ```bash
 cd github-user-activity
