@@ -94,7 +94,7 @@ function set_max_budget(budget, month) {
     } if (!Object.keys(aux.MONTHS).includes(month)) {
         throw errors.invalid_month_error;
     }
-    max_budgets[month] = budget;
+    max_budgets[month] = parseInt(budget);
     console.log("");
 }
 
