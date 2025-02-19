@@ -4,6 +4,7 @@ This repository contains some of the projects listed at [roadmap.sh](https://roa
 
 * [Task Tracker CLI](https://roadmap.sh/projects/task-tracker)
 * [GitHub User Activity CLI](https://roadmap.sh/projects/github-user-activity)
+* [Expense Tracker CLI](https://roadmap.sh/projects/expense-tracker)
 
 In order to try the projects, you will have to **clone the repository**. Open your terminal in the folder you want to clone the repository to and execute the following instruction:
 
