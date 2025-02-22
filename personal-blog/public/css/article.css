@@ -1,0 +1,45 @@
+.text-area {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 0;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: 4px solid var(--light-color);
+    border-radius: 20px;
+    outline: none;
+
+    /* Only for textarea elements */
+    resize: none;
+}
+
+#title-area {
+    font-size: 2.5em;
+}
+
+#content-area {
+    font-size: 1.35em;
+    min-height: 100vh;
+}
+
+#main #dates {
+    position: relative;
+    font-size: 0.8em;
+    font-style: italic;
+    margin: 20px;
+}
+
+#main #dates::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    background-color: var(--light-color);
+    top: 23px;
+    left: -20px;
+}
+
+#apply-button {
+    font-size: 1em;
+    padding: 5px;
+}

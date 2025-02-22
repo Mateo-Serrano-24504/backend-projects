@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= article.title %> </title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/article.css">
+</head>
+<body>
+    <main id="main">
+        <h1 id="article-title"> <%= article.title %> </h1>
+        <div id="dates">
+            <span>
+                Created on <time datetime="<%= article.creationDate %>"><%= article.creationDate %></time>
+            </span>
+            <% if (article.updateDate) { %>
+            <span>
+                updated on <time datetime="<%= article.creationDate %>"><%= article.updateDate %></time>
+            </span>
+            <% } %>
+        </div>
+        <p>
+            <%= article.content %>
+        </p>
+    </main>
+</body>
+</html>

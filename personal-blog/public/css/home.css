@@ -1,0 +1,67 @@
+:root {
+    --header-color: rgb(26, 26, 26);
+    --number-of-rings: 8;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    height: 20vh;
+    padding: 20px;
+    background-color: var(--header-color);
+}
+
+#header #profile-img {
+    height: 100%;
+    width: auto;
+    border-radius: 50%;
+    border: 1px solid var(--dark-color);
+    outline: 2px solid var(--light-color);
+}
+
+#main {
+    width: 50%;
+}
+
+#articles-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 88%;
+    gap: 3px;
+    margin: 5px 0;
+    font-size: 0.7em;
+}
+
+.article .buttons {
+    display: flex;
+    justify-content: end;
+    height: fit-content;
+    gap: 5px;
+}
+
+.article .separator {
+    width: 100%;
+}
+
+#foot-of-book {
+    display: flex;
+    justify-content: end;
+    width: 88%;
+}

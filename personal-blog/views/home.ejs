@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My personal blog - Mateo-Serrano-24504</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <header id="header">
+        <img id="profile-img" src="https://github.com/Mateo-Serrano-24504.png" alt="Mateo-Serrano-24504's profile image">
+        <h1>My personal blog -- Mateo-Serrano-24504</h1>
+    </header>
+    <main id="main">
+        <h3>My articles</h3>
+        <div class="separator"></div>
+        <div id="articles-container">
+            <% articles.forEach(article => { %>
+                <div id="<%= article.id %>" class="article">
+                    <span class="article-name"> <%= article.title %> </span>
+                    <div class="buttons">
+                        <% if (user.status === "admin") { %>
+                            <button class="delete button" data-article-id="<%= article.id %>">Delete</button>
+                            <button class="edit button" data-article-id="<%= article.id %>">Edit</button>
+                        <% } %>
+                        <button class="visit button" data-article-id="<%= article.id %>">Visit</button>
+                    </div>
+                    <div class="separator"></div>
+                </div>
+            <% }) %>
+        </div>
+        <% if (user.status === "admin") { %>
+            <div id="foot-of-book">
+                <button id="add-button" class="button">Add entry</button>
+            </div>
+        <% } %>
+    </main>
+    <script src="js/homeButtons.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-color: #141313;
+    --light-color: #dbdbdb;
+    --number-of-rings: 10;
+    --rings-width: 20px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-size: 1.5em;
+    font-family: monospace, serif;
+}
+
+#main {
+    position: relative;
+    width: 70%;
+    margin: 40px auto;
+    padding: 10px 10px 10px 30px;
+    border: 4px solid var(--light-color);
+    border-radius: 10px 40px 40px 10px;
+    flex-grow: 1;
+}
+
+#main::before {
+    content: "";
+    position: absolute;
+    height: calc(100% + 8px);
+    width: 80px;
+    top: -4px;
+    left: -100px;
+    border: 4px solid var(--light-color);
+    border-radius: 40px 10px 10px 40px;
+}
+
+#main::after {
+    content: "";
+    position: absolute;
+    width: calc(2 * var(--rings-width));
+    top: 50%;
+    transform: translateY(calc(-50% + 5px));
+    height: calc(100% - 40px);
+    left: calc(-96px - var(--rings-width));
+    background: repeating-linear-gradient(
+        var(--light-color) 0,
+        var(--light-color) 4px,
+        transparent 4px,
+        transparent calc((100% - var(--number-of-rings) * 4px) / (var(--number-of-rings) - 1))
+    );
+}
+
+.separator {
+    width: 90%;
+    height: 2px;
+    margin: 5px;
+    background-color: var(--light-color);
+}
+
+.button {
+    padding: 3px 5px;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: 1px solid var(--light-color);
+    border-radius: 8px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+#footer {
+    height: 40px;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "personal-blog",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "certificates": "bash certificates/generate_certificates.sh",
+    "start:dev": "node --watch server.js",
+    "prestart": "bash certificates/generate_certificates.sh",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Mateo-Serrano-24504",
+  "license": "ISC",
+  "description": "Personal Blog project with Node.JS and Express",
+  "dependencies": {
+    "basic-auth": "2.0.1",
+    "ejs": "3.1.10",
+    "express": "4.21.2",
+    "zod": "3.24.2"
+  }
+}

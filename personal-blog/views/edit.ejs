@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %> </title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/article.css">
+</head>
+<body>
+    <main id="main">
+        <form>
+            <% if (article) { %>
+                <textarea id="title-area" class="text-area" placeholder="title here"><%= article.title %></textarea>
+            <% } else { %>
+                <textarea id="title-area" class="text-area" placeholder="title here"></textarea>
+            <% } %>
+            <div class="separator"></div>
+            <% if (article) { %>
+                <textarea id="content-area" class="text-area" placeholder="content here"><%= article.content %></textarea>
+            <% } else { %>
+                <textarea id="content-area" class="text-area" placeholder="content here"></textarea>
+            <% } %>
+            <div class="separator"></div>
+            <button id="apply-button" class="button" type="submit" data-article-id="<%= article ? article.id : '' %>">Apply</button>
+        </form>
+    </main>
+    <footer id="footer"></footer>
+    <script src="/js/editButton.js"></script>
+</body>
+</html>
