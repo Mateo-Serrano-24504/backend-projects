@@ -1,10 +1,19 @@
 # Personal Blog Project
 
-Once you have clone the repository as indicated in the [main README file](../README.md), you are ready to go ahead.
+Once you have clone the repository as indicated in the [main README file](../README.md), you are ready to move to this folder by running this in your terminal:
+
+```bash
+cd personal-blog
+```
 
 ### Requirements
 
-This projects needs some dependencies of Node.JS to properly work. To install them, run the following in your terminal:
+This projects needs some dependencies of Node.JS to properly work. You will need, of course, Node.JS, and `npm` to manage the dependencies.
+
+* `Node.JS` (v22.14.0 LTS)
+* `npm` (v10.8.1)
+
+To install the dependencies, run the following in your terminal:
 
 ```bash
 npm install
