@@ -10,10 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@keyv/redis": "^5.1.1",
+    "cache-manager": "^7.1.1",
+    "dotenv": "^17.2.1",
     "express": "^5.1.0",
+    "ioredis": "^5.7.0",
     "zod": "^4.1.0"
   },
   "devDependencies": {
+    "@types/cache-manager": "^5.0.0",
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
     "ts-node-dev": "^2.0.0",
