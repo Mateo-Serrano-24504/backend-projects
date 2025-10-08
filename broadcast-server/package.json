@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/server.ts",
+  "type": "module",
   "scripts": {
     "test": "ts-node-dev --respawn --transpile-only src/server.ts"
   },
