@@ -2,10 +2,10 @@
   "name": "broadcast-server",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/server.ts",
+  "main": "dist/index.ts",
   "type": "module",
   "scripts": {
-    "test": "ts-node-dev --respawn --transpile-only src/server.ts"
+    "test": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
   "keywords": [],
   "author": "",
