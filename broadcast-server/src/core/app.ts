@@ -19,4 +19,8 @@ export default class App {
             console.log(`App listening in port ${this.port}`)
         );
     }
+
+    unwrap(): Application {
+        return this.app;
+    }
 }
