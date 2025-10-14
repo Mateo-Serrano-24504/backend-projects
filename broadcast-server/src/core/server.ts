@@ -1,22 +1,23 @@
+import http from "http";
+
 import App from "./app.js";
-import express from "express";
-import { Router } from "express";
+import Router from "./router.js"
 
 export default class Server {
     router: Router;
     app: App;
+    server: http.Server;
 
     constructor(port: Number, baseURL: string) {
-        this.router = Router();
-        this.app = new App(port, baseURL, this.router);
+        this.router = new Router();
+        this.app = new App(port, baseURL, this.router.unwrap());
+        this.server = http.createServer(this.app.unwrap());
         this.configure();
     }
 
     private configure() {
-        this.configureRouter();
-    }
-
-    private configureRouter() {
-        this.router.use(express.json());
+        this.server.listen(this.app.port, () => {
+            console.log(`HTTP Server listening in port ${this.app.port}`);
+        });
     }
 }
